@@ -9,6 +9,8 @@ listings.each do |listing|
   puts count
 
   puts listing.at_css('a.product-title-link').text.strip
+
+
 =begin
   # extract the information into the product hash
   product['title'] = listing.at_css('h3.s-item__title')&.text
