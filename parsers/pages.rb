@@ -8,6 +8,7 @@ products.each do |product|
   pages << {
       url: url,
       page_type: 'products',
+      fetch_type: 'browser',
       vars: {}
     }
 end
@@ -19,6 +20,7 @@ pagination_links.each do |link|
   pages << {
       url: url,
       page_type: 'pages',
+      fetch_type: 'browser',
       vars: {}
     }
 end
