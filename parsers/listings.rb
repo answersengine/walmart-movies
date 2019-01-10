@@ -1,6 +1,7 @@
 nokogiri = Nokogiri.HTML(content)
 
 #load products
+#these pages render using javascript so we need to use the 'browser' fetch_type
 products = nokogiri.css('#searchProductResult li')
 products.each do |product|
   href = product.at_css('a.product-title-link')['href']
@@ -14,6 +15,7 @@ products.each do |product|
 end
 
 #load paginated links
+#these pages render using javascript so we need to use the 'browser' fetch_type
 pagination_links = nokogiri.css('ul.paginator-list li a')
 pagination_links.each do |link|
   url = URI.join('https://www.walmart.com', link['href']).to_s
