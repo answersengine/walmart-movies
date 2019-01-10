@@ -1,5 +1,8 @@
 nokogiri = Nokogiri.HTML(content)
 
+title = nokogiri.at_css('.ProductTitle').text.strip
+price = nokogiri.att_css('span.price-characteristic').attr('content')
+raise content.inspect
 =begin
   product = {}
   # extract the information into the product hash

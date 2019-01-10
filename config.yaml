@@ -2,6 +2,6 @@ seeder:
  file: ./seeder/seeder.rb
  disabled: false
 parsers:
- - page_type: pages
-   file: ./parsers/pages.rb
+ - page_type: listings
+   file: ./parsers/listings.rb
    disabled: false
