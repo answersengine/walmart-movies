@@ -32,7 +32,7 @@ product['walmart_number'] = nokogiri.at_css('.prod-productsecondaryinformation .
 product['img_url'] = nokogiri.at_css('.prod-hero-image img')['src'].split('?').first
 
 #extract product categories
-product['categories'] = nokogiri.css('.breadcrumb-list li').collect{|li| li.text.strip.gsub('/','') }.join(' > ')
+product['categories'] = nokogiri.css('.breadcrumb-list li').collect{|li| li.text.strip.gsub('/','') }
 
 # specify the collection where this record will be stored
 product['_collection'] = "products"
