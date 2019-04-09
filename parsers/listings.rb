@@ -18,7 +18,7 @@ end
 #these pages render using javascript so we need to use the 'browser' fetch_type
 pagination_links = nokogiri.css('ul.paginator-list li a')
 pagination_links.each do |link|
-  url = URI.join('https://www.walmart.com', link['href']).to_s
+  url = URI.join('https://www.walmart.com', link['href']).to_s.gsub(/\/\//,"")
   pages << {
       url: url,
       page_type: 'listings',
